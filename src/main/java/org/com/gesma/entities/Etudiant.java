@@ -2,9 +2,12 @@ package org.com.gesma.entities;
 
 import java.util.Date;
 
-public class Etudiant {
+import javax.persistence.Entity;
+
+@Entity
+public class etudiant {
 	
-	public Etudiant() {
+	public etudiant() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
