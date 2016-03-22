@@ -1,11 +1,19 @@
 package org.com.gesma.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-public class Etudiant {
+@Table
+public class Etudiant implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	public Etudiant() {
 		super();
