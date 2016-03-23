@@ -1,5 +1,7 @@
 package org.com.gesma.dao;
 
+import org.com.gesma.entities.Employee;
+
 public interface GesmaDao {
-	public Integer addEmployee(String fname, String lname, int salary);
+	public void addEmployee(Employee e);
 }

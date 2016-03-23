@@ -1,6 +1,8 @@
 package org.com.gesma.metier;
 
+import org.com.gesma.entities.Employee;
+
 public interface GesmaMetier {
-	public Integer addEmployee(String fname, String lname, int salary);
+	public void addEmployee(Employee e);
 
 }

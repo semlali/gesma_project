@@ -1,19 +1,21 @@
 package org.com.gesma.metier;
 
 import org.com.gesma.dao.GesmaDao;
+import org.com.gesma.entities.Employee;
 
 public class GesmaMetierImp implements GesmaMetier {
-	GesmaDao dao;
-	public GesmaDao getDao() {
-		return dao;
-	}
+	private GesmaDao dao;
+	
+
 	public void setDao(GesmaDao dao) {
 		this.dao = dao;
 	}
+	
 	@Override
-	public Integer addEmployee(String fname, String lname, int salary) {
-		
-		return dao.addEmployee(fname, lname, salary);
+	public void addEmployee(Employee e) {
+	    dao.addEmployee(e);
+	    
+	    
 	}
 
 }

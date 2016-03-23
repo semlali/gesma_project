@@ -8,32 +8,24 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import gesma_project.hibernatUtil;
 
 public class GesmaDaoImp {
 
+	 @Autowired
 	 private static SessionFactory factory;
 	   /* Method to CREATE an employee in the database */
-	   public Integer addEmployee(String fname, String lname, int salary){
-	      Session session = factory.openSession();
-	      Transaction tx = null;
-	      Integer employeeID = null;
-	      try{
-	         tx = session.beginTransaction();
-	         Employee employee = new Employee();
-	         employee.setFirstName(fname);
-	         employee.setLastName(lname);
-	         employee.setSalary(salary);
-	         employeeID = (Integer) session.save(employee); 
-	         tx.commit();
-	      }catch (HibernateException e) {
-	         if (tx!=null) tx.rollback();
-	         e.printStackTrace(); 
-	      }finally {
-	         session.close(); 
-	      }
-	      return employeeID;
+	   public void addEmployee(Employee e){
+	      Session session = hibernatUtil.getSessionFactory().getCurrentSession();
+	      session.beginTransaction();   
+	      session.save(e); 
+	      session.getTransaction().commit();;
+	   
+	    
 	   }
-  public void listEmployees( ){
+ /* public void listEmployees( ){
     Session session = factory.openSession();
     Transaction tx = null;
     try{
@@ -53,5 +45,5 @@ public class GesmaDaoImp {
     }finally {
        session.close(); 
     }
-  }
+  }*/
 }
