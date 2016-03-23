@@ -1,12 +1,10 @@
-
-
-
-import org.com.gesma.dao.GesmaDaoImp;
 import org.com.gesma.entities.Employee;
+import org.com.gesma.metier.GesmaMetier;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class Test {
+	
 	 private static SessionFactory factory;
 	public static void main(String[] args) {
 		
@@ -16,19 +14,20 @@ public class Test {
 	                   //addPackage("com.xyz") //add package if used.
 	                   addAnnotatedClass(Employee.class).
 	                   buildSessionFactory();
+	         System.out.println("create factory in test");
 	      }catch (Throwable ex) { 
 	         System.err.println("Failed to create sessionFactory object." + ex);
 	         throw new ExceptionInInitializerError(ex); 
 	      }
-	      GesmaDaoImp ME = new GesmaDaoImp();
+		 
+		 
+	      GesmaMetier metier = null;
+	      
+	      metier.addEmployee("samia", "semlali", 15000);
+	      
 
-	      /* Add few employee records in database */
-	     /* Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
-	      Integer empID2 = ME.addEmployee("Daisy", "Das", 5000);
-	      Integer empID3 = ME.addEmployee("John", "Paul", 10000);
-
-	      /* List down all the employees 
-	      ME.listEmployees();*/
+	      // List down all the employees 
+	      //ME.listEmployees();
 
 	     
 	}

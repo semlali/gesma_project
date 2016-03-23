@@ -12,9 +12,12 @@ import org.hibernate.Transaction;
 public class GesmaDaoImp {
 
 	 private static SessionFactory factory;
+	 Session session = factory.openSession();
+	 
+	 
 	   /* Method to CREATE an employee in the database */
-	   public Integer addEmployee(String fname, String lname, int salary){
-	      Session session = factory.openSession();
+	   public void addEmployee(String fname, String lname, int salary){
+	      
 	      Transaction tx = null;
 	      Integer employeeID = null;
 	      try{
@@ -31,8 +34,11 @@ public class GesmaDaoImp {
 	      }finally {
 	         session.close(); 
 	      }
-	      return employeeID;
+	      
 	   }
+	   
+	   
+	   //method lister les employes
   public void listEmployees( ){
     Session session = factory.openSession();
     Transaction tx = null;

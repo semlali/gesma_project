@@ -15,7 +15,7 @@
 
    <!-- Assume students is the database name -->
    <property name="hibernate.connection.url">
-      jdbc:mysql://localhost/gesma
+      jdbc:mysql://localhost/base_projet_gesma
    </property>
    <property name="hibernate.connection.username">
       root
