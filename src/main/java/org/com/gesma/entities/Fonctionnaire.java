@@ -1,14 +1,8 @@
 package org.com.gesma.entities;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-@Entity
-@Table
-public class Fonctionnaire implements Serializable {
+public class Fonctionnaire {
 	
 	private int n_fonc;
 	private String nom_fonc;
@@ -55,6 +49,14 @@ public class Fonctionnaire implements Serializable {
 	private int id_cycle;
 	private int activation; 
 	private int id_ecole;
+	
+	//getters and setters
+	public int getN_fonc() {
+		return n_fonc;
+	}
+	public void setN_fonc(int n_fonc) {
+		this.n_fonc = n_fonc;
+	}
 	public String getNom_fonc() {
 		return nom_fonc;
 	}
