@@ -55,6 +55,12 @@ public class Fonctionnaire implements Serializable {
 	private int id_cycle;
 	private int activation; 
 	private int id_ecole;
+	private int compteBancaire;
+	private int numCnss;
+	private int numCimr;
+	private int numMutuelle;
+	
+	
 	public String getNom_fonc() {
 		return nom_fonc;
 	}
@@ -324,21 +330,57 @@ public class Fonctionnaire implements Serializable {
 	//constructeur sans para
 	
 	
+	public int getN_fonc() {
+		return n_fonc;
+	}
+	public void setN_fonc(int n_fonc) {
+		this.n_fonc = n_fonc;
+	}
+	public int getCompteBancaire() {
+		return compteBancaire;
+	}
+	public void setCompteBancaire(int compteBancaire) {
+		this.compteBancaire = compteBancaire;
+	}
+	public int getNumCnss() {
+		return numCnss;
+	}
+	public void setNumCnss(int numCnss) {
+		this.numCnss = numCnss;
+	}
+	public int getNumCimr() {
+		return numCimr;
+	}
+	public void setNumCimr(int numCimr) {
+		this.numCimr = numCimr;
+	}
+	public int getNumMutuelle() {
+		return numMutuelle;
+	}
+	public void setNumMutuelle(int numMutuelle) {
+		this.numMutuelle = numMutuelle;
+	}
 	public Fonctionnaire() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	//constructeur avec para
-	public Fonctionnaire(String nom_fonc, String prenom_fonc, String nom_fonc_ara, String prenom_fonc_ara,
-			int matricule, String nationalite, String cin, Date date_naissance, String lieu_naissance, String sexe,
-			int echelon, Date date_echelon, String cadre_actuel, Date date_domination_etab, String situation_familiale,
-			int nbr_enfants, String adresse, String ville, String telephone, String email, String photo_fonc,
-			Date date_travail, String login, String pass, String code_fonctionaire, Date date_titularisation,
-			Date date_cadre, Date date_echel, String type_acces_echel, String enciennete_echel, Date date_tache,
-			Date date_nomination_delegation, Date date_nomination_academie, String type_fonc,
-			Date date_situation_familiale, String echel, String mode_affectation, int annee_scolaire, int id_matiere,
-			int id_conjoint, int id_tache, int id_cycle, int activation, int id_ecole) {
+	public Fonctionnaire(String nom_fonc, String prenom_fonc,
+			String nom_fonc_ara, String prenom_fonc_ara, int matricule,
+			String nationalite, String cin, Date date_naissance,
+			String lieu_naissance, String sexe, int echelon, Date date_echelon,
+			String cadre_actuel, Date date_domination_etab,
+			String situation_familiale, int nbr_enfants, String adresse,
+			String ville, String telephone, String email, String photo_fonc,
+			Date date_travail, String login, String pass,
+			String code_fonctionaire, Date date_titularisation,
+			Date date_cadre, Date date_echel, String type_acces_echel,
+			String enciennete_echel, Date date_tache,
+			Date date_nomination_delegation, Date date_nomination_academie,
+			String type_fonc, Date date_situation_familiale, String echel,
+			String mode_affectation, int annee_scolaire, int id_matiere,
+			int id_conjoint, int id_tache, int id_cycle, int activation,
+			int id_ecole, int compteBancaire, int numCnss, int numCimr,
+			int numMutuelle) {
 		super();
 		this.nom_fonc = nom_fonc;
 		this.prenom_fonc = prenom_fonc;
@@ -384,7 +426,14 @@ public class Fonctionnaire implements Serializable {
 		this.id_cycle = id_cycle;
 		this.activation = activation;
 		this.id_ecole = id_ecole;
+		this.compteBancaire = compteBancaire;
+		this.numCnss = numCnss;
+		this.numCimr = numCimr;
+		this.numMutuelle = numMutuelle;
 	}
+	
+	//constructeur avec para
+	
 	
 	
 	
